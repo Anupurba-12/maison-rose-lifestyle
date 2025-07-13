@@ -1,4 +1,5 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { Suspense } from "react";
 import Home from "./pages/Home";
 import Cafe from "./pages/Cafe";
 import { Toaster } from "react-hot-toast";
@@ -20,52 +21,49 @@ const App = () => {
   return (
     <BrowserRouter
       future={{
-        v7_relativeSplatPath: true, // Optional future feature
-        v7_startTransition: true, // Opt-in to future React.startTransition behavior
+        v7_relativeSplatPath: true,
+        v7_startTransition: true,
       }}>
       <div className="min-h-screen flex flex-col">
         <ScrollToTopOnRouteChange />
         <DesktopNavbar />
         <MobileNavbar />
         <WhatsAppComponent />
+
         <div className="flex-1 bg-primary-bg xl:pt-0">
-          <Routes>
-            <Route path='/' element={<Home />} />
+          <Suspense fallback={<div className="text-center py-10 text-lg text-white">Loading...</div>}>
+            <Routes>
+              <Route path='/' element={<Home />} />
 
-            {/* cafe routes   */}
-            <Route path='/cafe' element={<Cafe />} />
-            <Route path='/combos' element={<Combos />} />
+              {/* cafe routes */}
+              <Route path='/cafe' element={<Cafe />} />
+              <Route path='/combos' element={<Combos />} />
 
-            {/* salon routes  */}
-            <Route path='/salon' element={<Salon />} />
-            <Route path='/nailarts' element={<NailArtsPage />} />
+              {/* salon routes */}
+              <Route path='/salon' element={<Salon />} />
+              <Route path='/nailarts' element={<NailArtsPage />} />
 
-            {/* Store Routes  */}
-            <Route path='/store' element={<Fashion />} />
-            {/* Search: any dynamic search */}
-            <Route path='/fashion-store/s/:filterSearch' element={<ProductPage />} />
-            {/* Sub Category: satin, ruffle  */}
-            <Route path='fashion-store/c/:cat/:subcat' element={<ProductPage />} />
-            {/* Category: dress, co-ords  */}
-            <Route path='fashion-store/c/:cat' element={<ProductPage />} />
-            {/* whats new  */}
-            <Route path='fashion-store/new/:whatsnew' element={<ProductPage />} />
-            {/* Type: dress, hats, jewellery  */}
-            <Route path='fashion-store/:type' element={<ProductPage />} />
-            <Route path='/product/:productId' element={<ProductDetails />} />
+              {/* store routes */}
+              <Route path='/store' element={<Fashion />} />
+              <Route path='/fashion-store/s/:filterSearch' element={<ProductPage />} />
+              <Route path='fashion-store/c/:cat/:subcat' element={<ProductPage />} />
+              <Route path='fashion-store/c/:cat' element={<ProductPage />} />
+              <Route path='fashion-store/new/:whatsnew' element={<ProductPage />} />
+              <Route path='fashion-store/:type' element={<ProductPage />} />
+              <Route path='/product/:productId' element={<ProductDetails />} />
 
-
-            <Route path='/about' element={<About />} />
-            <Route path='/contact' element={<About />} />
-            <Route path='/lander' element={<Navigate to="/" replace />} />
-            <Route path="*" element={<Navigate to="/" />} />
-          </Routes>
+              <Route path='/about' element={<About />} />
+              <Route path='/contact' element={<About />} />
+              <Route path='/lander' element={<Navigate to="/" replace />} />
+              <Route path="*" element={<Navigate to="/" />} />
+            </Routes>
+          </Suspense>
         </div>
         <Footer />
       </div>
       <Toaster />
     </BrowserRouter>
-  )
-}
+  );
+};
 
 export default App;

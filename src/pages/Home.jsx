@@ -40,7 +40,7 @@ const Home = () => {
         {/* Preloading Images */}
         <link
           rel="preload"
-          href="./fashion/maincopy.webp"
+          href="https://res.cloudinary.com/dtc7gtofw/image/upload/v1752390566/maincopy_loxhtg.jpg"
           as="image"
           type="image/png"
         />
@@ -77,7 +77,7 @@ const Home = () => {
             </div>
             <div className="w-[78%] relative bg-primary-bg overflow-hidden">
               <img
-                src="./fashion/maincopy.webp"
+                src="https://res.cloudinary.com/dtc7gtofw/image/upload/v1752390566/maincopy_loxhtg.jpg"
                 alt="Maison Rose Lifestyle - Café and Fashion Store in New Town Kolkata"
                 className="min-w-full min-h-full"
               />
@@ -164,7 +164,7 @@ const Home = () => {
           </div>
           <div className="w-[78%] relative overflow-hidden">
             <img
-              src="./fashion/maincopy.webp"
+              src="https://res.cloudinary.com/dtc7gtofw/image/upload/v1752390566/maincopy_loxhtg.jpg"
               alt="Maison Rose Lifestyle - Café and Fashion Store in New Town Kolkata"
               className="min-w-full min-h-full"
             />
