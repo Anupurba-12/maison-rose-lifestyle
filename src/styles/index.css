@@ -1,0 +1,243 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.clip-figure {
+  clip-path: path('M0 0 H100 V100 A100 100 0 0 1 0 0 Z');
+}
+
+.no-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* WebKit (Google Chrome, Safari) */
+}
+
+.stylish-scroll {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #181818 #000000; /* Thumb color and track color */
+
+  /* Webkit-based browsers */
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #181818;
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #202020;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #f4f4f4;
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-corner {
+    background-color: #f4f4f4;
+  }
+}
+
+
+
+.menu-item-description {
+  min-width: 200px;
+  max-width: 400px; /* Set the desired width of the div */
+  word-wrap: break-word; /* Break words that are too long */
+  word-break: break-word; /* Ensure long words break */
+  white-space: normal; /* Allow text to wrap onto new lines */
+  overflow: hidden; /* Hide any overflow content if needed */
+}
+
+
+@keyframes glow {
+  0% {
+    box-shadow: 0px 0px 10px #ffda77, 0px 0px 20px #e0c097;
+  }
+  50% {
+    box-shadow: 0px 0px 20px #ffda77, 0px 0px 40px #e0c097;
+  }
+  100% {
+    box-shadow: 0px 0px 10px #ffda77, 0px 0px 20px #e0c097;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+
+.cafe-bg-img{
+    background-image: url('./background/menu.png');
+  background-size: cover; /* or 'contain', 'auto' */
+  background-repeat: no-repeat; /* Prevents tiling */
+  background-position: center; /* Center aligns the image */
+}
+
+.image-bottom{
+  
+}
+
+
+
+
+.WidgetTitle__Header-sc-ruy1gu-2.dnAvMj{
+  display: none;
+}
+
+
+
+
+
+
+.parallax {
+  overflow: hidden;
+  letter-spacing: -2px;
+  line-height: 0.8;
+  margin: 0;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax .scroller {
+  /* font-weight: 600; */
+  text-transform: uppercase;
+  font-size: 37px;
+  font-family: forum;
+  letter-spacing: 4px;
+  display: flex;
+  white-space: nowrap;
+  display: flex;
+  color: #EFE7D2;
+  flex-wrap: nowrap;
+}
+
+.parallax span {
+  display: block;
+  margin-right: 30px;
+}
+
+
+
+/* hamburger menu   */
+
+/* Dropdown Menu */
+.dropdown {
+  position: absolute;
+  z-index: 10;
+  top: 40px;
+  width: 90vw;
+  left: -10px;
+  border: 1px solid #EFE7D215;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.dropdown.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Submenu */
+.submenu {
+  list-style: none;
+  margin: 0;
+  padding: 0 20px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.show-submenu {
+  max-height: 100px; /* Adjust to fit submenu content */
+  overflow: scroll;
+  opacity: 1;
+}
+
+.hide-submenu {
+  max-height: 0;
+  opacity: 0;
+}
+
+/* General Styling */
+.menu-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 10;
+}
+
+.hamburger {
+  cursor: pointer;
+  width: 35px;
+  height: 30px;
+  /* border: none; */
+  background: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* padding: 0; */
+  transition: transform 0.3s ease;
+  margin-left: 0px;
+}
+
+.hamburger span {
+  display: block;
+  width: 90%;
+  height: 1px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #EFE7D2;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translateY(13px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-13px);
+}
+
+/* Menu Items */
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 10px 20px;
+}
+
+.menu li {
+  margin: 10px 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #EFE7D2;
+  font-family: forum;
+  font-size: 16px;
+}
