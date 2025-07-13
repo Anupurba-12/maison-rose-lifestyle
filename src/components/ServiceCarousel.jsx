@@ -11,7 +11,7 @@ const ServiceCarousel = () => {
       id: 1,
       name: "Fashion Boutique",
       description: "Discover our curated collection of Thai-inspired fashion pieces, featuring elegant floral dresses, contemporary Korean styles, and vintage-inspired clothing. Each piece is carefully selected to blend Eastern grace with modern aesthetics, perfect for both casual outings and special occasions.",
-      image: "./images/fashion.jpg",
+      image: "https://res.cloudinary.com/dtc7gtofw/image/upload/v1752391817/fashion_itwnjs.jpg",
       price: "Dresses starting from ₹999",
       path: "/store"
     },
@@ -19,7 +19,7 @@ const ServiceCarousel = () => {
       id: 2,
       name: "Luxury Salon",
       description: "Experience premium beauty services in our state-of-the-art salon. From signature hair treatments and styling to professional makeup services, our expert stylists use premium products to enhance your natural beauty. Enjoy personalized consultations and transformative beauty experiences.",
-      image: "./images/salon.png",
+      image: "https://res.cloudinary.com/dtc7gtofw/image/upload/v1752391894/salon_utoifz.png",
       price: "Services starting from ₹499",
       path: "/salon"
     },
@@ -27,7 +27,7 @@ const ServiceCarousel = () => {
       id: 3,
       name: "Café & Restaurant",
       description: "Indulge in our artisanal coffee selection and gourmet dining experience. Our menu features a perfect blend of international cuisines, handcrafted beverages, and delectable desserts. Enjoy the cozy ambiance perfect for casual meetings, romantic dates, or peaceful solo dining.",
-      image: "./images/coffee.jpg",
+      image: "https://res.cloudinary.com/dtc7gtofw/image/upload/v1752391893/coffee_w9gj7n.jpg",
       price: "Beverages from ₹299",
       path: "/cafe"
     },
@@ -35,7 +35,7 @@ const ServiceCarousel = () => {
       id: 4,
       name: "Nail Art Studio",
       description: "Visit our specialized nail art studio for creative and professional nail care services. Our skilled technicians offer everything from classic manicures to intricate nail art designs. Using premium products and sterilized equipment, we ensure both beauty and hygiene in every service.",
-      image: "./images/nailart.png",
+      image: "https://res.cloudinary.com/dtc7gtofw/image/upload/v1752391894/nailart_q6sbbl.png",
       price: "Services from ₹399",
       path: "/nailarts"
     }

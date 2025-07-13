@@ -12,7 +12,7 @@ import toast from 'react-hot-toast'
 import { GiCrossMark } from 'react-icons/gi'
 
 const Cafe = () => {
-    const [selectedItem, setSelectedItem] = useState('./images/coffee.jpg');
+    const [selectedItem, setSelectedItem] = useState('https://res.cloudinary.com/dtc7gtofw/image/upload/v1752391893/coffee_w9gj7n.jpg');
     const [selectedItemName, setSelectedItemName] = useState('Cafe');
 
 
@@ -133,7 +133,7 @@ const Cafe = () => {
                                                             <img
                                                                 src={item.imageurl || `./menu/${menuCategory.category}/${item.name.replace(/ /g, '-')}.png`}
                                                                 alt={item.name.toLowerCase().replace(/ /g, '-')}
-                                                                className="h-full w-full"
+                                                                className="object-cover"
                                                             />
                                                         </div>
 

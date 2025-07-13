@@ -46,19 +46,19 @@ const Home = () => {
         />
         <link
           rel="preload"
-          href="./images/salon.png"
+          href="https://res.cloudinary.com/dtc7gtofw/image/upload/v1752391894/salon_utoifz.png"
           as="image"
           type="image/png"
         />
         <link
           rel="preload"
-          href="./images/coffee.jpg"
+          href="https://res.cloudinary.com/dtc7gtofw/image/upload/v1752391893/coffee_w9gj7n.jpg"
           as="image"
           type="image/jpeg"
         />
         <link
           rel="preload"
-          href="./images/fashion3.jpg"
+          href="https://res.cloudinary.com/dtc7gtofw/image/upload/v1752392069/fashion3_ixplb0.jpg"
           as="image"
           type="image/jpeg"
         />
@@ -95,7 +95,7 @@ const Home = () => {
                 className="h-full w-full relative flex-grow-1 bg-primary-bg rounded-2xl rounded-br-none overflow-hidden"
               >
                 <img
-                  src="./images/salon.png"
+                  src="https://res.cloudinary.com/dtc7gtofw/image/upload/v1752391894/salon_utoifz.png"
                   alt="Luxury Salon Services at Maison Rose Lifestyle"
                   className="object-cover bottom-0 absolute w-full transition duration-300 ease-in-out transform hover:scale-[103%]"
                   loading="lazy"
@@ -114,7 +114,7 @@ const Home = () => {
                 className="h-full w-full relative flex-grow-1 bg-primary-bg rounded-2xl rounded-br-none overflow-hidden"
               >
                 <img
-                  src="./images/coffee.jpg"
+                  src="https://res.cloudinary.com/dtc7gtofw/image/upload/v1752391893/coffee_w9gj7n.jpg"
                   alt="Gourmet Café Experience in New Town Kolkata"
                   className="object-cover h-full absolute w-full transition duration-300 ease-in-out transform hover:scale-[103%]"
                   loading="lazy"
@@ -133,7 +133,7 @@ const Home = () => {
                 className="h-full w-full relative flex-grow-1 bg-primary-bg rounded-2xl rounded-br-none overflow-hidden"
               >
                 <img
-                  src="./images/fashion3.jpg"
+                  src="https://res.cloudinary.com/dtc7gtofw/image/upload/v1752392069/fashion3_ixplb0.jpg"
                   alt="Thai-Inspired Fashion Collection in Kolkata"
                   className="absolute -top-1/3 w-full transition duration-300 ease-in-out transform hover:scale-[103%]"
                   loading="lazy"
@@ -231,7 +231,7 @@ const Home = () => {
             data-aos="fade-right"
           >
             <img
-              src="./images/salon.png"
+              src="https://res.cloudinary.com/dtc7gtofw/image/upload/v1752391894/salon_utoifz.png"
               alt="Luxury Salon Services at Maison Rose Lifestyle"
               className="object-cover bottom-0 absolute w-full transition duration-300 ease-in-out transform hover:scale-[103%]"
               loading="lazy"
@@ -252,7 +252,7 @@ const Home = () => {
               data-aos="fade-left"
             >
               <img
-                src="./images/coffee.jpg"
+                src="https://res.cloudinary.com/dtc7gtofw/image/upload/v1752391893/coffee_w9gj7n.jpg"
                 alt="Gourmet Café Experience in New Town Kolkata"
                 className="object-cover h-full absolute w-full transition duration-300 ease-in-out transform hover:scale-[103%]"
                 loading="lazy"
@@ -273,7 +273,7 @@ const Home = () => {
             data-aos="fade-right"
           >
             <img
-              src="./images/fashion3.jpg"
+              src="https://res.cloudinary.com/dtc7gtofw/image/upload/v1752392069/fashion3_ixplb0.jpg"
               alt="Thai-Inspired Fashion Collection in Kolkata"
               className="absolute -top-1/3 w-full transition duration-300 ease-in-out transform hover:scale-[103%]"
               loading="lazy"

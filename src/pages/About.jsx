@@ -46,7 +46,7 @@ const About = () => {
 
                 <div className='relative h-46 w-full'>
                     <img
-                        src="./images/coffeeMug.png"
+                        src="https://res.cloudinary.com/dtc7gtofw/image/upload/v1752392039/coffeeMug_f8qlr5.png"
                         alt="Maison Rose Lifestyle's signature coffee experience in New Town, Kolkata"
                         className='h-full w-full rounded-xl'
                         loading="lazy"
@@ -181,7 +181,7 @@ const About = () => {
                             {/* images section */}
                             <div className='w-1/2 grid grid-cols-2 grid-rows-2 gap-2 rounded-xl'>
                                 <div className='overflow-hidden rounded-xl'>
-                                    <img src="./images/coffee.jpg" alt="Maison Rose Lifestyle's gourmet coffee experience in Kolkata" className='h-full w-full' />
+                                    <img src="https://res.cloudinary.com/dtc7gtofw/image/upload/v1752391893/coffee_w9gj7n.jpg" alt="Maison Rose Lifestyle's gourmet coffee experience in Kolkata" className='h-full w-full' />
                                 </div>
                             </div>
                         </div>
