@@ -5,7 +5,7 @@ import AnimatedDropdown from '../components/store/AnimatedDropdown';
 import DesktopProductModal from '../components/store/DesktopProductModal';
 import { ClimbingBoxLoader } from 'react-spinners';
 import { override } from '../constants/basic';
-import { fetchAllProducts, fetchFilteredProductsOnCategory, fetchFilteredProductsOnSearch, fetchFilteredProductsOnSubCategory, fetchFilteredProductsOnType, fetchFilteredProductsOnWhatsNew } from '../api/AirtableApis';
+import { CheckClickRate, fetchAllProducts, fetchFilteredProductsOnCategory, fetchFilteredProductsOnSearch, fetchFilteredProductsOnSubCategory, fetchFilteredProductsOnType, fetchFilteredProductsOnWhatsNew } from '../api/AirtableApis';
 import ErrorComponent from '../components/basics/ErrorComponent';
 import NoProductsFound from '../components/basics/NoProductsFound';
 import SearchBar from '../components/store/SearchBar';
@@ -22,7 +22,9 @@ const ProductPage = () => {
     const [error, setError] = useState(false);
 
 
-
+    useEffect(() => {
+        CheckClickRate();
+    }, [])
 
     useEffect(() => {
         const getFilteredProducts = async () => {

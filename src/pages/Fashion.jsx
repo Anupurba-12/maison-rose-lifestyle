@@ -15,7 +15,7 @@ import Airtable from 'airtable'
 
 import { ClimbingBoxLoader } from 'react-spinners'
 import { override } from '../constants/basic'
-import { fetchWhatsNewRecords } from '../api/AirtableApis'
+import { CheckClickRate, fetchWhatsNewRecords } from '../api/AirtableApis'
 import { useNavigate } from 'react-router-dom'
 import SearchBar from '../components/store/SearchBar'
 
@@ -26,13 +26,19 @@ const Fashion = () => {
     const [whatsNewLoading, setWhatsNewLoading] = useState(false);
 
     useEffect(() => {
+
         Aos.init();
+    }, [])
+
+    useEffect(() => {
+        CheckClickRate();
     }, [])
 
     const [whatsNew, setWhatsNew] = useState();
     const [search, setSearch] = useState('');
 
     useEffect(() => {
+
         const getRecords = async () => {
             setWhatsNewLoading(true);
             try {
@@ -43,26 +49,10 @@ const Fashion = () => {
                 setWhatsNewLoading(false);
             }
         };
-
         getRecords();
     }, []);
 
     const p1 = useRef(null);
-    const p2 = useRef(null);
-    const p3 = useRef(null);
-
-    const scrollToPart = (ref) => {
-        const element = ref.current;
-        if (element) {
-            // Scroll to the element with an offset of 10px
-            window.scrollTo({
-                top: element.offsetTop - 200, // Adjust 10px above the element
-                behavior: 'smooth',
-            });
-        }
-
-    };
-    const navigate = useNavigate();
 
     return (
         <div className='max-xl:pt-16 min-h-screen p-3 xl:p-6 flex flex-col overflow-x-hidden bg-primary-bg relative'>
