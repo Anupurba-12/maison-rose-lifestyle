@@ -157,3 +157,28 @@ export const getProductById = async (productId) => {
         throw error;
     }
 };
+
+//Check Who Clicked Buy Now
+export const createProductWithDate = async () => {
+    const currentDateTime = new Date().toISOString(); // Airtable accepts ISO 8601 format
+
+    try {
+        const response = await axios.post(
+            `${API_URL}/${'BuyNow'}`,
+            {
+                fields: {
+                    Date: currentDateTime
+                }
+            },
+            config
+        );
+
+        return {
+            id: response.data.id,
+            ...response.data.fields
+        };
+    } catch (error) {
+        console.error('Error creating product with date:', error);
+        throw error;
+    }
+};
